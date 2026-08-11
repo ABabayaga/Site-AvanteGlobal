@@ -1,0 +1,135 @@
+.footer {
+  position: relative;
+  background: #16213e;
+}
+
+.footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  display: grid;
+  grid-template-columns: minmax(0, 420px) auto auto;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.footer-text {
+  margin-top: 20px;
+  max-width: 380px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #a9b0c3;
+}
+
+.footer-heading {
+  margin: 0 0 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #f5f1e6;
+}
+
+.footer-nav ul,
+.footer-contact ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-nav a,
+.footer-contact a {
+  font-size: 15px;
+  color: #a9b0c3;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer-nav a:hover,
+.footer-contact a:hover {
+  color: #c9a24b;
+}
+
+.footer-bottom {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 40px;
+  border-top: 1px solid rgba(245, 241, 230, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  color: rgba(245, 241, 230, 0.5);
+}
+
+.footer-domain {
+  color: rgba(245, 241, 230, 0.5);
+  text-decoration: none;
+}
+
+.footer-domain:hover {
+  color: #c9a24b;
+}
+
+.footer-whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #c9a24b;
+  color: #1a2332;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 999px;
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.4);
+}
+
+.footer-whatsapp:hover {
+  background: #d9b978;
+}
+
+.footer-whatsapp svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    padding: 48px 20px 32px;
+    gap: 40px;
+  }
+
+  .footer-text {
+    max-width: none;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px;
+  }
+}
