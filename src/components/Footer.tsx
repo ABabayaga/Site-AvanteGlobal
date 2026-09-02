@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 
 const NAV_LINKS = [
-  { label: 'Institucional', href: '#institucional' },
-  { label: 'Seguros', href: '#seguros' },
-  { label: 'Tecnologias', href: '#tecnologias' },
-  { label: 'Consultorias', href: '#consultorias' },
-  { label: 'Parceiros', href: '#parceiros' },
+  { label: 'Institucional', to: '/institucional' },
+  { label: 'Seguros', to: '/seguros' },
+  { label: 'Tecnologias', to: '/tecnologias' },
+  { label: 'Consultorias', to: '/consultorias' },
+  { label: 'Parceiros', to: '/parceiros' },
 ]
 
 const PHONE_CONTACTS = [
@@ -25,13 +26,13 @@ function Footer() {
     <footer className="relative bg-navy">
       <div className="mx-auto grid max-w-360 grid-cols-[minmax(0,420px)_auto_auto] justify-between gap-10 px-10 pt-16 pb-12 max-lg:grid-cols-1 max-lg:px-5 max-lg:pt-12 max-lg:pb-8">
         <div>
-          <a href="#inicio" className="inline-flex items-center">
+          <Link to="/" className="inline-flex items-center">
             <img
               src={logo}
               alt="Avante Global"
               className="h-10 w-auto brightness-0 invert"
             />
-          </a>
+          </Link>
           <p className="mt-5 max-w-95 text-[15px] leading-relaxed text-text-onDark max-lg:max-w-none">
             Seguros e consultoria empresarial. Solução total com abrangência
             nacional para logística, transporte e para a sua empresa.
@@ -43,14 +44,14 @@ function Footer() {
             Navegação
           </h3>
           <ul className="m-0 flex list-none flex-col gap-4 p-0">
-            {NAV_LINKS.map(({ label, href }) => (
+            {NAV_LINKS.map(({ label, to }) => (
               <li key={label}>
-                <a
-                  href={href}
+                <Link
+                  to={to}
                   className="text-[15px] whitespace-nowrap text-text-onNavy no-underline hover:text-gold"
                 >
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

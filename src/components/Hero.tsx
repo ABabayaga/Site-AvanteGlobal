@@ -1,61 +1,79 @@
+import { Link } from 'react-router-dom'
+
 const STATS = [
-  { value: '35', label: 'Anos em logística' },
-  { value: '18', label: 'Anos em seguros' },
+  { value: '35+', label: 'Anos em logística' },
+  { value: '18+', label: 'Anos em seguros' },
   { value: '100%', label: 'Abrangência nacional' },
 ]
 
 function Hero() {
   return (
     <section
-      className="relative overflow-hidden bg-linear-to-br from-navy-deep via-slate to-steel from-0% via-55% to-100%"
+      className="relative overflow-hidden bg-navy-deep font-hero"
       id="inicio"
     >
-      <div className="mx-auto max-w-360 px-10 pt-24 pb-30 max-lg:px-5 max-lg:pt-16 max-lg:pb-20">
-        <div className="mb-8 flex items-center gap-3 text-[13px] font-semibold tracking-[2px] text-gold uppercase">
-          <span className="h-px w-6 bg-gold" />
-          <span>Seguros · Consultoria · Tecnologia</span>
+      <div className="relative mx-auto max-w-360 px-10 pt-24 pb-20 max-lg:px-5 max-lg:pt-14 max-lg:pb-14">
+        <div className="mb-8 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-white/90">
+          Seguros · Consultoria · Tecnologia
         </div>
 
-        <h1 className="mb-7 max-w-225 font-display text-[64px] leading-[1.15] font-medium tracking-[-0.5px] text-cream max-lg:text-4xl">
-          Avante com a Global:{' '}
-          <em className="text-gold-light italic">solução total</em> para
-          a sua empresa.
+        <h1 className="mb-7 max-w-190 text-[56px] leading-[1.12] font-extrabold tracking-[-0.5px] text-white max-lg:text-4xl">
+          Avante Global:{' '}
+          <span className="text-sky-accent">solução total</span> para a sua
+          empresa, a nível nacional.
         </h1>
 
-        <p className="mb-10 max-w-140 text-lg leading-relaxed text-text-onDark max-lg:text-base">
+        <p className="mb-10 max-w-135 text-lg leading-relaxed text-text-onDark max-lg:text-base">
           Especialistas em todos os ramos de seguros e em gestão de negócios de
           sucesso, com abrangência nacional e tecnologia para logística e
           transporte.
         </p>
 
-        <div className="mb-22 flex flex-wrap items-center gap-4 max-lg:mb-14">
+        <div className="mb-16 flex flex-wrap items-center gap-4 max-lg:mb-10">
           <a
             href="#contato"
-            className="inline-flex items-center gap-2.5 rounded bg-gold px-6 py-4 text-[15px] font-semibold whitespace-nowrap text-ink no-underline hover:bg-gold-light"
+            className="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-navy-deep no-underline hover:bg-white/90"
           >
             Fale com um especialista
             <span aria-hidden="true">→</span>
           </a>
-          <a
-            href="#institucional"
-            className="inline-flex items-center gap-2.5 rounded border border-cream/35 px-6 py-4 text-[15px] font-semibold whitespace-nowrap text-cream no-underline hover:border-cream/70"
+          <Link
+            to="/institucional"
+            className="inline-flex items-center gap-2.5 rounded-full border border-white/30 px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-white no-underline hover:border-white/60"
           >
             Conheça a Avante
-          </a>
+          </Link>
         </div>
 
-        <dl className="m-0 flex flex-wrap gap-16 max-lg:gap-8">
+        <dl className="m-0 mb-10 flex flex-wrap gap-14 max-lg:gap-8">
           {STATS.map(({ value, label }) => (
             <div key={label}>
-              <dt className="font-display text-4xl font-medium text-cream max-lg:text-3xl">
+              <dt className="text-[38px] leading-none font-extrabold text-white max-lg:text-3xl">
                 {value}
               </dt>
-              <dd className="mt-1 text-xs font-semibold tracking-[1.5px] text-text-onDark-muted uppercase">
+              <dd className="mt-2 text-[11px] font-semibold tracking-[1.5px] text-text-onDark-muted uppercase">
                 {label}
               </dd>
             </div>
           ))}
         </dl>
+
+        <div className="flex items-center gap-3 border-t border-white/10 pt-6 text-sm text-text-onDark-muted">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/25">
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 text-white/80">
+              <path
+                fill="currentColor"
+                d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm0 2.2 6 2.2v4.6c0 4-2.6 7.6-6 8.9-3.4-1.3-6-4.9-6-8.9V6.4l6-2.2Z"
+              />
+            </svg>
+          </span>
+          <p className="m-0">
+            <span className="font-semibold text-white">
+              Seguro é uma questão de confiança.
+            </span>{' '}
+            Nossa assinatura há 17 anos.
+          </p>
+        </div>
       </div>
 
       <a
