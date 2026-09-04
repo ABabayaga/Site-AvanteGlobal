@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import useScrollReveal from '../hooks/useScrollReveal'
 
 const QUESTIONS = [
   {
@@ -54,22 +55,34 @@ const FRENTES = [
 
 function Consultorias() {
   const [openFrente, setOpenFrente] = useState<string | null>(null)
+  const diagnosticoScope = useScrollReveal<HTMLElement>()
+  const frentesScope = useScrollReveal<HTMLElement>()
+  const especiaisScope = useScrollReveal<HTMLElement>()
 
   return (
     <>
-      <section className="bg-ice py-20 max-lg:py-14" id="consultorias">
+      <section ref={diagnosticoScope} className="bg-ice py-20 max-lg:py-14" id="consultorias">
         <div className="mx-auto max-w-360 px-10 max-lg:px-5">
           <div className="rounded-3xl bg-linear-to-br from-navy-deep to-navy-light px-14 py-16 max-lg:px-6 max-lg:py-10">
-            <div className="mb-8 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-white/90">
+            <div
+              data-reveal
+              className="mb-8 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-white/90"
+            >
               Consultoria · antes da solução, o diagnóstico
             </div>
 
-            <h2 className="mb-7 max-w-180 text-[40px] leading-[1.15] font-extrabold tracking-[-0.5px] text-white max-lg:text-3xl">
+            <h2
+              data-reveal
+              className="mb-7 max-w-180 text-[40px] leading-[1.15] font-extrabold tracking-[-0.5px] text-white max-lg:text-3xl"
+            >
               Você conhece os maiores desafios da sua empresa, hoje e no
               futuro?
             </h2>
 
-            <p className="mb-10 max-w-160 text-lg leading-relaxed text-text-onDark max-lg:text-base">
+            <p
+              data-reveal
+              className="mb-10 max-w-160 text-lg leading-relaxed text-text-onDark max-lg:text-base"
+            >
               A consultoria da Avante começa exatamente aqui. Se você travar
               em alguma destas perguntas, já sabemos por onde a conversa deve
               começar.
@@ -79,6 +92,7 @@ function Consultorias() {
               {QUESTIONS.map(({ number, text }) => (
                 <div
                   key={number}
+                  data-reveal
                   className="flex gap-3 rounded-2xl border border-white/10 bg-white/5 p-5"
                 >
                   <span className="shrink-0 text-sm font-bold text-sky-accent">
@@ -108,18 +122,27 @@ function Consultorias() {
         </div>
       </section>
 
-      <section className="bg-ice py-20 max-lg:py-14">
+      <section ref={frentesScope} className="bg-ice py-20 max-lg:py-14">
         <div className="mx-auto max-w-360 px-10 max-lg:px-5">
-          <div className="mb-8 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue">
+          <div
+            data-reveal
+            className="mb-8 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue"
+          >
             Consultorias
           </div>
 
-          <h2 className="mb-7 max-w-180 text-[40px] leading-[1.15] font-extrabold tracking-[-0.5px] text-ink max-lg:text-3xl">
+          <h2
+            data-reveal
+            className="mb-7 max-w-180 text-[40px] leading-[1.15] font-extrabold tracking-[-0.5px] text-ink max-lg:text-3xl"
+          >
             A empresa inteira, de ponta a ponta.
             <span className="mt-3 block h-1 w-16 rounded-full bg-sky-accent" />
           </h2>
 
-          <p className="mb-10 max-w-160 text-lg leading-relaxed text-text max-lg:text-base">
+          <p
+            data-reveal
+            className="mb-10 max-w-160 text-lg leading-relaxed text-text max-lg:text-base"
+          >
             Da operação ao financeiro, do RH à tecnologia. Clique em cada
             frente.
           </p>
@@ -130,6 +153,7 @@ function Consultorias() {
               return (
                 <div
                   key={number}
+                  data-reveal
                   className="rounded-2xl border border-ice-border bg-white"
                 >
                   <button
@@ -163,10 +187,10 @@ function Consultorias() {
         </div>
       </section>
 
-      <section className="bg-ice pb-20 max-lg:pb-14">
+      <section ref={especiaisScope} className="bg-ice pb-8 max-lg:pb-10">
         <div className="mx-auto max-w-360 px-10 max-lg:px-5">
-          <div className="flex overflow-hidden rounded-3xl bg-navy max-lg:flex-col">
-            <div className="flex w-[55%] flex-col justify-center gap-5 px-14 py-14 max-lg:w-full max-lg:px-6 max-lg:py-10">
+          <div data-reveal className="flex overflow-hidden rounded-3xl bg-navy max-lg:flex-col">
+            <div className="flex w-[55%] flex-col justify-center gap-3 px-14 py-6 max-lg:w-full max-lg:px-6 max-lg:py-8">
               <div className="inline-flex w-fit items-center rounded-full bg-white/10 px-5 py-2.5 text-[13px] font-medium text-white/90">
                 Consultorias especiais
               </div>
@@ -190,7 +214,10 @@ function Consultorias() {
               </a>
             </div>
 
-            <div className="w-[45%] bg-linear-to-br from-navy-dusk to-navy-light max-lg:h-56 max-lg:w-full" />
+            <div
+              className="w-[45%] bg-cover bg-center max-lg:h-56 max-lg:w-full"
+              style={{ backgroundImage: 'url(/consu.png)' }}
+            />
           </div>
         </div>
       </section>

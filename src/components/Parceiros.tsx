@@ -1,3 +1,5 @@
+import useScrollReveal from '../hooks/useScrollReveal'
+
 const PARCEIRO_TAGS = [
   'Gerenciadoras de risco',
   'TMS e WMS',
@@ -7,10 +9,12 @@ const PARCEIRO_TAGS = [
 ]
 
 function Parceiros() {
+  const scope = useScrollReveal<HTMLElement>()
+
   return (
-    <section className="bg-ice py-24 font-hero max-lg:py-14" id="parceiros">
+    <section ref={scope} className="bg-ice py-24 font-hero max-lg:py-14" id="parceiros">
       <div className="mx-auto max-w-360 px-10 max-lg:px-5">
-        <div className="mx-auto max-w-160 text-center">
+        <div data-reveal className="mx-auto max-w-160 text-center">
           <div className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue">
             Parceiros
           </div>
@@ -28,7 +32,7 @@ function Parceiros() {
         </div>
 
         <div className="mt-14 grid grid-cols-2 gap-6 max-lg:grid-cols-1">
-          <div className="rounded-3xl border border-ice-border bg-white p-10 max-lg:p-6">
+          <div data-reveal className="rounded-3xl border border-ice-border bg-white p-10 max-lg:p-6">
             <div className="mb-3 text-[13px] font-bold tracking-wide text-blue uppercase">
               Nossos parceiros
             </div>
@@ -54,7 +58,10 @@ function Parceiros() {
             </div>
           </div>
 
-          <div className="rounded-3xl bg-linear-to-br from-navy-deep to-navy-light p-10 max-lg:p-6">
+          <div
+            data-reveal
+            className="rounded-3xl bg-linear-to-br from-navy-deep to-navy-light p-10 max-lg:p-6"
+          >
             <div className="mb-3 text-[13px] font-bold tracking-wide text-sky-accent uppercase">
               Seja nosso parceiro
             </div>

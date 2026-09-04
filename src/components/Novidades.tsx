@@ -1,3 +1,5 @@
+import useScrollReveal from '../hooks/useScrollReveal'
+
 type NewsItem = {
   tag: string
   title: string
@@ -23,14 +25,22 @@ const NEWS_ITEMS: NewsItem[] = [
 ]
 
 function Novidades() {
+  const scope = useScrollReveal<HTMLElement>()
+
   return (
-    <section id="novidades" className="bg-ice py-24 font-hero max-lg:py-14">
+    <section ref={scope} id="novidades" className="bg-ice py-24 font-hero max-lg:py-14">
       <div className="mx-auto max-w-360 px-10 max-lg:px-5">
-        <div className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue">
+        <div
+          data-reveal
+          className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue"
+        >
           Você sabia?
         </div>
 
-        <h2 className="mb-6 text-[44px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-3xl">
+        <h2
+          data-reveal
+          className="mb-6 text-[44px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-3xl"
+        >
           <span className="relative inline-block">
             O que muda
             <span
@@ -41,7 +51,7 @@ function Novidades() {
           no seu setor.
         </h2>
 
-        <p className="mb-14 max-w-160 text-lg text-text max-lg:mb-10 max-lg:text-base">
+        <p data-reveal className="mb-14 max-w-160 text-lg text-text max-lg:mb-10 max-lg:text-base">
           Mudanças legais e de mercado que afetam quem transporta, contrata
           seguro e gere frota.
         </p>
@@ -50,6 +60,7 @@ function Novidades() {
           {NEWS_ITEMS.map((item) => (
             <div
               key={item.title}
+              data-reveal
               className="overflow-hidden rounded-2xl bg-white shadow-[0_1px_3px_rgba(20,27,46,0.08)]"
             >
               <div className="h-1.5 w-full bg-linear-to-r from-navy-deep to-sky-accent" />

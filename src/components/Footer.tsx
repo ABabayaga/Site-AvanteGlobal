@@ -93,6 +93,17 @@ function Footer() {
         </p>
       </div>
 
+      <div className="bg-[#2a2a28] px-4 py-1 sm:px-4">
+                <a
+                    href="https://www.instagram.com/br7.mkt_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center text-[9px] uppercase tracking-[0.16em] text-white/60 hover:text-white/80 transition-colors sm:text-[10px] sm:tracking-[0.2em]"
+                >
+                    Agência BR7 – Marketing em Movimento {new Date().getFullYear()}
+                </a>
+            </div>
+
       <a
         href="https://wa.me/5562994440500"
         target="_blank"

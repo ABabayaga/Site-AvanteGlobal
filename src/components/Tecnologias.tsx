@@ -1,3 +1,5 @@
+import useScrollReveal from '../hooks/useScrollReveal'
+
 const FEATURES = [
   {
     title: 'Rastreador híbrido satelital / GPRS',
@@ -41,14 +43,22 @@ const FEATURES = [
 ]
 
 function Tecnologias() {
+  const scope = useScrollReveal<HTMLElement>()
+
   return (
-    <section id="tecnologias" className="bg-ice py-24 font-hero max-lg:py-14">
+    <section ref={scope} id="tecnologias" className="bg-ice py-24 font-hero max-lg:py-14">
       <div className="mx-auto max-w-360 px-10 max-lg:px-5">
-        <div className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue">
+        <div
+          data-reveal
+          className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue"
+        >
           Gestão de Risco
         </div>
 
-        <h1 className="mb-6 max-w-190 text-[44px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-3xl">
+        <h1
+          data-reveal
+          className="mb-6 max-w-190 text-[44px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-3xl"
+        >
           <span className="relative inline-block">
             Gestão de risco
             <span
@@ -59,7 +69,10 @@ function Tecnologias() {
           e tecnologia para o transporte.
         </h1>
 
-        <p className="mb-14 max-w-160 text-lg text-text max-lg:mb-10 max-lg:text-base">
+        <p
+          data-reveal
+          className="mb-14 max-w-160 text-lg text-text max-lg:mb-10 max-lg:text-base"
+        >
           Atuamos com parcerias integradas e as principais e mais modernas
           tecnologias para gestão de risco, gestão de transportes e logística
           em geral.
@@ -67,12 +80,13 @@ function Tecnologias() {
 
         <div className="mb-14 grid grid-cols-[1fr_1fr] items-center gap-14 max-lg:mb-10 max-lg:grid-cols-1 max-lg:gap-8">
           <img
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+            data-reveal
+            src="/risco.png"
             alt="Torre de controle da Avante Global monitorando rotas e veículos em tempo real"
-            className="aspect-4/3 w-full rounded-2xl object-cover"
+            className="aspect-2/1 w-full rounded-2xl object-cover"
           />
 
-          <div>
+          <div data-reveal>
             <div className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue">
               Risco sob controle
             </div>
@@ -93,6 +107,7 @@ function Tecnologias() {
           {FEATURES.map((feature) => (
             <div
               key={feature.title}
+              data-reveal
               className="flex flex-col rounded-2xl border border-ice-border bg-white p-5"
             >
               <h5 className="m-0 mb-2 text-base font-bold text-navy-deep">

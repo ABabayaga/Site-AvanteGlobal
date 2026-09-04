@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import useScrollReveal from '../hooks/useScrollReveal'
 
 const ATENDIMENTOS = [
   {
@@ -59,19 +60,36 @@ const PRODUTOS = [
 ]
 
 function Inicio() {
+  const comoAtendemosScope = useScrollReveal<HTMLElement>()
+  const produtosScope = useScrollReveal<HTMLElement>()
+  const nossoJeitoScope = useScrollReveal<HTMLElement>()
+
   return (
     <>
-      <section className="bg-ice py-24 font-hero max-lg:py-14" id="como-atendemos">
-        <div className="mx-auto max-w-360 px-10 max-lg:px-5">
-          <div className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue">
+      <section
+        ref={comoAtendemosScope}
+        className="bg-ice py-24 font-hero max-lg:py-14"
+        id="como-atendemos"
+      >
+        <div className="mx-auto max-w-360 px-20 max-lg:px-5">
+          <div
+            data-reveal
+            className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue"
+          >
             Como atendemos
           </div>
 
-          <h2 className="mb-6 max-w-160 text-[44px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-3xl">
+          <h2
+            data-reveal
+            className="mb-6 max-w-160 text-[44px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-3xl"
+          >
             Cada necessidade tem o seu caminho.
           </h2>
 
-          <div className="mb-14 max-w-160 border-t-4 border-sky-accent pt-4 max-lg:mb-10">
+          <div
+            data-reveal
+            className="mb-14 max-w-160 border-t-4 border-sky-accent pt-4 max-lg:mb-10"
+          >
             <p className="m-0 text-lg text-text max-lg:text-base">
               Algumas proteções a gente resolve direto. Operação de transporte
               pede análise, gestão e acompanhamento.
@@ -82,6 +100,7 @@ function Inicio() {
             {ATENDIMENTOS.map(({ label, title, text, linkLabel, to, dark }) => (
               <div
                 key={label}
+                data-reveal
                 className={`rounded-2xl p-10 max-lg:p-8 ${
                   dark
                     ? 'bg-navy-deep'
@@ -124,17 +143,30 @@ function Inicio() {
         </div>
       </section>
 
-      <section className="bg-[#eef3fa] py-24 font-hero max-lg:py-14" id="produtos-e-servicos">
-        <div className="mx-auto max-w-360 px-10 max-lg:px-5">
-          <div className="mb-4 text-[13px] font-bold tracking-[1px] text-blue uppercase">
+      <section
+        ref={produtosScope}
+        className="bg-[#eef3fa] py-24 font-hero max-lg:py-14"
+        id="produtos-e-servicos"
+      >
+        <div className="mx-auto max-w-360 px-20 max-lg:px-5">
+          <div
+            data-reveal
+            className="mb-4 text-[13px] font-bold tracking-[1px] text-blue uppercase"
+          >
             Produtos e serviços
           </div>
 
-          <h2 className="mb-6 max-w-160 text-[44px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-3xl">
+          <h2
+            data-reveal
+            className="mb-6 max-w-160 text-[44px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-3xl"
+          >
             Tudo o que a Avante entrega.
           </h2>
 
-          <div className="mb-14 max-w-160 border-t-4 border-sky-accent pt-4 max-lg:mb-10">
+          <div
+            data-reveal
+            className="mb-14 max-w-160 border-t-4 border-sky-accent pt-4 max-lg:mb-10"
+          >
             <p className="m-0 text-lg text-text max-lg:text-base">
               Clique para conhecer cada frente em detalhe.
             </p>
@@ -144,6 +176,7 @@ function Inicio() {
             {PRODUTOS.map(({ icon, label, title, text, to }) => (
               <div
                 key={title}
+                data-reveal
                 className="rounded-2xl bg-white p-8"
               >
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-sky-accent/15">
@@ -171,7 +204,10 @@ function Inicio() {
             ))}
           </div>
 
-          <div className="mb-8 grid grid-cols-2 overflow-hidden rounded-2xl bg-navy-deep max-lg:grid-cols-1">
+          <div
+            data-reveal
+            className="mb-8 grid grid-cols-2 overflow-hidden rounded-2xl bg-navy-deep max-lg:grid-cols-1"
+          >
             <div className="flex flex-col justify-center p-12 max-lg:p-8">
               <div className="mb-6 inline-flex w-fit items-center rounded-full bg-white/10 px-5 py-2 text-[13px] font-semibold text-white/90">
                 Reforma tributária
@@ -198,8 +234,11 @@ function Inicio() {
             />
           </div>
 
-          <div className="rounded-2xl bg-navy py-14 text-center max-lg:py-10">
-            <h3 className="mx-auto mb-4 max-w-180 px-8 text-[28px] leading-tight font-extrabold text-white max-lg:text-2xl">
+          <div
+            data-reveal
+            className="flex flex-col items-center justify-center gap-4 rounded-2xl bg-navy py-14 text-center max-lg:py-10"
+          >
+            <h3 className="mx-auto max-w-180 px-8 text-[28px] leading-tight font-extrabold text-white max-lg:text-2xl">
               Avante Global: atuação com foco do cliente e solução total em
               nível nacional.
             </h3>
@@ -210,10 +249,10 @@ function Inicio() {
         </div>
       </section>
 
-      <section className="bg-ice py-24 font-hero max-lg:py-14" id="nosso-jeito">
-        <div className="mx-auto max-w-360 px-10 max-lg:px-5">
+      <section ref={nossoJeitoScope} className="bg-ice py-24 font-hero max-lg:py-14" id="nosso-jeito">
+        <div className="mx-auto max-w-360 px-20 max-lg:px-5">
           <div className="grid grid-cols-[1fr_1fr] items-start gap-14 max-lg:grid-cols-1 max-lg:gap-8">
-            <div>
+            <div data-reveal>
               <div className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue">
                 Nosso jeito
               </div>
@@ -244,9 +283,10 @@ function Inicio() {
             </div>
 
             <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+              data-reveal
+              src="/inicio.png"
               alt="Time da Avante Global monitorando rotas de transporte em tempo real"
-              className="aspect-4/3 w-full rounded-2xl object-cover"
+              className="ml-auto aspect-video w-[90%] rounded-2xl object-cover max-lg:w-full"
             />
           </div>
         </div>

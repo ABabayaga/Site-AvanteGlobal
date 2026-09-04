@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import useScrollReveal from '../hooks/useScrollReveal'
 
 const STATS = [
   { value: '35+', label: 'Anos em logística' },
@@ -7,8 +8,11 @@ const STATS = [
 ]
 
 function Hero() {
+  const scope = useScrollReveal<HTMLElement>()
+
   return (
     <section
+      ref={scope}
       className="relative -mt-28 overflow-hidden bg-navy-deep pt-28 font-hero max-lg:-mt-24 max-lg:pt-24"
       id="inicio"
     >
@@ -28,23 +32,32 @@ function Hero() {
       />
 
       <div className="relative mx-auto max-w-360 px-10 pt-14 pb-12 max-lg:px-5 max-lg:pt-10 max-lg:pb-10">
-        <div className="mb-8 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-white/90">
+        <div
+          data-reveal
+          className="mb-8 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-white/90"
+        >
           Seguros · Consultoria · Tecnologia
         </div>
 
-        <h1 className="mb-7 max-w-190 text-[56px] leading-[1.12] font-extrabold tracking-[-0.5px] text-white max-lg:text-4xl">
+        <h1
+          data-reveal
+          className="mb-7 max-w-190 text-[56px] leading-[1.12] font-extrabold tracking-[-0.5px] text-white max-lg:text-4xl"
+        >
           Avante Global:{' '}
           <span className="text-sky-accent">solução total</span> para a sua
           empresa, a nível nacional.
         </h1>
 
-        <p className="mb-10 max-w-135 text-lg leading-relaxed text-text-onDark max-lg:text-base">
+        <p
+          data-reveal
+          className="mb-10 max-w-135 text-lg leading-relaxed text-text-onDark max-lg:text-base"
+        >
           Especialistas em todos os ramos de seguros e em gestão de negócios de
           sucesso, com abrangência nacional e tecnologia para logística e
           transporte.
         </p>
 
-        <div className="mb-10 flex flex-wrap items-center gap-4 max-lg:mb-8">
+        <div data-reveal className="mb-10 flex flex-wrap items-center gap-4 max-lg:mb-8">
           <a
             href="#contato"
             className="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-navy-deep no-underline hover:bg-white/90"
@@ -60,7 +73,7 @@ function Hero() {
           </Link>
         </div>
 
-        <dl className="m-0 mb-7 flex flex-wrap gap-14 max-lg:gap-8">
+        <dl data-reveal-immediate className="m-0 mb-7 flex flex-wrap gap-14 max-lg:gap-8">
           {STATS.map(({ value, label }) => (
             <div key={label}>
               <dt className="text-[38px] leading-none font-extrabold text-white max-lg:text-3xl">
@@ -73,7 +86,10 @@ function Hero() {
           ))}
         </dl>
 
-        <div className="flex items-center gap-3 border-t border-white/10 pt-6 text-sm text-text-onDark-muted">
+        <div
+          data-reveal-immediate
+          className="flex items-center gap-3 border-t border-white/10 pt-6 text-sm text-text-onDark-muted"
+        >
           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/25">
             <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 text-white/80">
               <path

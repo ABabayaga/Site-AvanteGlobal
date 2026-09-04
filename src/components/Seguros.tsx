@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import useScrollReveal from '../hooks/useScrollReveal'
 
 const CARGO_TAGS = [
   'Grãos',
@@ -219,15 +220,22 @@ const CATEGORIES: Category[] = [
 
 function Seguros() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const scope = useScrollReveal<HTMLElement>()
 
   return (
-    <section id="seguros" className="bg-ice py-24 font-hero max-lg:py-14">
+    <section ref={scope} id="seguros" className="bg-ice py-24 font-hero max-lg:py-14">
       <div className="mx-auto max-w-360 px-10 max-lg:px-5">
-        <div className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue">
+        <div
+          data-reveal
+          className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue"
+        >
           Seguros
         </div>
 
-        <h1 className="mb-6 max-w-190 text-[52px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-4xl">
+        <h1
+          data-reveal
+          className="mb-6 max-w-190 text-[52px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-4xl"
+        >
           <span className="relative inline-block">
             Todos os
             <span
@@ -238,17 +246,20 @@ function Seguros() {
           ramos de seguro em um único lugar.
         </h1>
 
-        <p className="mb-2 max-w-160 text-lg text-text max-lg:text-base">
+        <p data-reveal className="mb-2 max-w-160 text-lg text-text max-lg:text-base">
           Seguro é uma questão de confiança, nossa assinatura há mais de 18 anos.
         </p>
 
-        <p className="mb-10 max-w-160 text-lg text-text max-lg:text-base">
+        <p data-reveal className="mb-10 max-w-160 text-lg text-text max-lg:text-base">
           A Avante Global trabalha com as principais seguradoras nacionais e
           internacionais. Possuímos centenas de apólices emitidas em todos os
           ramos de seguro.
         </p>
 
-        <div className="mb-8 inline-flex items-center gap-2.5 rounded-full bg-emerald-50 px-5 py-2.5 text-[13px] font-semibold text-emerald-700">
+        <div
+          data-reveal
+          className="mb-8 inline-flex items-center gap-2.5 rounded-full bg-emerald-50 px-5 py-2.5 text-[13px] font-semibold text-emerald-700"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 shrink-0">
             <path
               fill="currentColor"
@@ -258,7 +269,7 @@ function Seguros() {
           Centenas de apólices emitidas em todos os ramos de seguros.
         </div>
 
-        <div className="mb-8 overflow-hidden rounded-3xl bg-navy-deep p-10 max-lg:p-6">
+        <div data-reveal className="mb-8 overflow-hidden rounded-3xl bg-navy-deep p-10 max-lg:p-6">
           <div className="mb-5 inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white/80">
             Transporte é o nosso território
           </div>
@@ -284,7 +295,10 @@ function Seguros() {
           </div>
         </div>
 
-        <div className="mb-10 rounded-2xl border-l-4 border-amber-glow bg-cream px-8 py-6 max-lg:px-5">
+        <div
+          data-reveal
+          className="mb-10 rounded-2xl border-l-4 border-amber-glow bg-cream px-8 py-6 max-lg:px-5"
+        >
           <h4 className="mb-2 text-lg font-bold text-navy-deep">
             Na ocorrência de eventual sinistro: está preparado para fazer essa
             gestão?
@@ -305,6 +319,7 @@ function Seguros() {
             return (
               <div
                 key={category.number}
+                data-reveal
                 className="overflow-hidden rounded-3xl bg-white shadow-[0_1px_3px_rgba(20,27,46,0.08)]"
               >
                 <button
