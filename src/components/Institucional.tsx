@@ -16,6 +16,8 @@ const LIDERANCA = [
     bullets: [
       '35 anos na cadeia logística',
       '18 anos com todos os ramos de seguros',
+      'Especialista em todos os ramos de seguros',
+      'Especialista em gestão de risco',
       'MBA em Operações e Logística',
       'Coach em Gestão de Resultados',
       'Especialista em TMS e WMS',
@@ -50,8 +52,8 @@ function Institucional() {
 
           <div className="mb-14 max-w-160 border-t-4 border-sky-accent pt-4 max-lg:mb-10">
             <p className="m-0 text-lg text-text max-lg:text-base">
-              Especialistas em seguros e gestão, com parcerias em nível
-              nacional.
+              Somos especialistas em todos os ramos de seguros e gestão de
+              risco, contando com parceiros a nível nacional.
             </p>
           </div>
 
@@ -66,8 +68,8 @@ function Institucional() {
               <p className="mb-6 text-lg leading-relaxed text-text">
                 A Avante Global Seguros e Consultoria Empresarial é
                 especialista em todos os ramos de seguros, com um time
-                dedicado a gerir negócios de sucesso e agregar valor em
-                todas as áreas da empresa.
+                dedicado e experiência de mais de 35 anos em gerir negócios
+                de sucesso e agregar valor em todas as áreas da empresa.
               </p>
               <p className="mb-8 text-lg leading-relaxed text-text">
                 Contamos com parcerias em nível nacional e soluções de
@@ -93,7 +95,7 @@ function Institucional() {
                   <span className="font-bold">
                     Seguro é uma questão de confiança.
                   </span>{' '}
-                  Há 17 anos.
+                  Há mais de 18 anos.
                 </span>
               </div>
             </div>

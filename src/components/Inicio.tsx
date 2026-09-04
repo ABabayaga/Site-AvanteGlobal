@@ -27,7 +27,7 @@ const PRODUTOS = [
         d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm0 2.2 6 2.2v4.6c0 4-2.6 7.6-6 8.9-3.4-1.3-6-4.9-6-8.9V6.4l6-2.2Z"
       />
     ),
-    label: 'Todos os ramos, num só lugar.',
+    label: 'Todos os ramos de seguros, em um único lugar.',
     title: 'Seguros de transporte',
     text: 'RCTR-C, RC-DC, RC-V, transporte nacional, frota e ambiental. Proteção para a carga e o veículo.',
     to: '/seguros',
@@ -200,8 +200,8 @@ function Inicio() {
 
           <div className="rounded-2xl bg-navy py-14 text-center max-lg:py-10">
             <h3 className="mx-auto mb-4 max-w-180 px-8 text-[28px] leading-tight font-extrabold text-white max-lg:text-2xl">
-              Avante Global: foco no cliente e solução total em nível
-              nacional.
+              Avante Global: atuação com foco do cliente e solução total em
+              nível nacional.
             </h3>
             <p className="m-0 text-[13px] font-semibold tracking-[1.5px] text-sky-accent uppercase">
               Sua empresa crescendo com segurança, tecnologia e estratégia

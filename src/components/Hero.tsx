@@ -9,10 +9,25 @@ const STATS = [
 function Hero() {
   return (
     <section
-      className="relative overflow-hidden bg-navy-deep font-hero"
+      className="relative -mt-28 overflow-hidden bg-navy-deep pt-28 font-hero max-lg:-mt-24 max-lg:pt-24"
       id="inicio"
     >
-      <div className="relative mx-auto max-w-360 px-10 pt-24 pb-20 max-lg:px-5 max-lg:pt-14 max-lg:pb-14">
+      <img
+        src="/truck3.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover object-right opacity-60"
+      />
+      <div
+        className="absolute inset-0 bg-linear-to-r from-navy-deep via-navy-deep/95 via-40% to-navy-deep/10"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute inset-0 bg-linear-to-t from-navy-deep via-transparent via-30% to-navy-deep/40"
+        aria-hidden="true"
+      />
+
+      <div className="relative mx-auto max-w-360 px-10 pt-14 pb-12 max-lg:px-5 max-lg:pt-10 max-lg:pb-10">
         <div className="mb-8 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-white/90">
           Seguros · Consultoria · Tecnologia
         </div>
@@ -29,7 +44,7 @@ function Hero() {
           transporte.
         </p>
 
-        <div className="mb-16 flex flex-wrap items-center gap-4 max-lg:mb-10">
+        <div className="mb-10 flex flex-wrap items-center gap-4 max-lg:mb-8">
           <a
             href="#contato"
             className="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-navy-deep no-underline hover:bg-white/90"
@@ -45,7 +60,7 @@ function Hero() {
           </Link>
         </div>
 
-        <dl className="m-0 mb-10 flex flex-wrap gap-14 max-lg:gap-8">
+        <dl className="m-0 mb-7 flex flex-wrap gap-14 max-lg:gap-8">
           {STATS.map(({ value, label }) => (
             <div key={label}>
               <dt className="text-[38px] leading-none font-extrabold text-white max-lg:text-3xl">
@@ -71,7 +86,7 @@ function Hero() {
             <span className="font-semibold text-white">
               Seguro é uma questão de confiança.
             </span>{' '}
-            Nossa assinatura há 17 anos.
+            Nossa assinatura há mais de 18 anos.
           </p>
         </div>
       </div>

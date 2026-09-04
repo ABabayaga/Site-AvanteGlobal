@@ -33,10 +33,10 @@ type Category = {
 const CATEGORIES: Category[] = [
   {
     number: '01',
-    title: 'Transporte e Carga',
-    note: 'Todos os ramos, num só lugar.',
+    title: 'Transporte e Logística',
+    note: 'Todos os ramos de seguros, em um único lugar.',
     description:
-      'Proteção completa para a mercadoria e a operação, da origem ao destino.',
+      'Proteção completa para as mercadorias, patrimônio, pessoas e operação, da origem ao destino.',
     items: [
       {
         badge: 'OBRIGATÓRIO · RAMO 54',
@@ -79,7 +79,7 @@ const CATEGORIES: Category[] = [
       },
       {
         badge: 'RECOMENDADO',
-        title: 'Ambiental (cargas perigosas)',
+        title: 'Ambiental',
         description:
           'Cobre danos ambientais causados a terceiros e as despesas de contenção, limpeza e reparação. Mesmo sem obrigação legal geral, costuma ser exigência do próprio segmento para o transporte de produtos químicos e cargas perigosas.',
         footnote:
@@ -91,9 +91,9 @@ const CATEGORIES: Category[] = [
   },
   {
     number: '02',
-    title: 'Empresa e Pessoas',
-    note: 'Proteção para o patrimônio e para quem faz a empresa.',
-    description: 'Segurança para as atividades, o patrimônio e os colaboradores.',
+    title: 'Empresas',
+    note: 'Proteção para o patrimônio e para as atividades.',
+    description: 'Segurança para as atividades e o patrimônio da empresa.',
     items: [
       {
         badge: 'FACULTATIVO',
@@ -111,22 +111,44 @@ const CATEGORIES: Category[] = [
       },
       {
         badge: 'FACULTATIVO',
-        title: 'Vida em Grupo',
+        title: 'RC Geral',
+        description:
+          'Responsabilidade Civil Geral. Protege a empresa contra danos corporais e materiais causados a terceiros nas suas atividades.',
+        footnote: 'Facultativo. Regulado pela SUSEP.',
+      },
+    ],
+  },
+  {
+    number: '03',
+    title: 'Pessoas',
+    note: 'Proteção para quem faz a empresa.',
+    description: 'Segurança para os colaboradores e suas famílias.',
+    items: [
+      {
+        badge: 'FACULTATIVO',
+        title: 'Seguro de Vida',
         description:
           'Ampara colaboradores e famílias em caso de morte, invalidez e outros eventos cobertos.',
         footnote: 'Facultativo. Seguro de pessoas regulado pela SUSEP.',
       },
       {
         badge: 'FACULTATIVO',
-        title: 'Saúde',
+        title: 'Seguro Saúde',
         description:
           'Plano de saúde empresarial: assistência médica e hospitalar para colaboradores e dependentes.',
-        footnote: 'Regulado pela ANS — Lei nº 9.656/1998.',
+        footnote: 'Regulado pela ANS, Lei nº 9.656/1998.',
+      },
+      {
+        badge: 'FACULTATIVO',
+        title: 'Odontológico',
+        description:
+          'Plano odontológico empresarial: assistência odontológica para colaboradores e dependentes.',
+        footnote: 'Regulado pela ANS, Lei nº 9.656/1998.',
       },
     ],
   },
   {
-    number: '03',
+    number: '04',
     title: 'Seguro Agro',
     note: 'Do campo ao armazém, proteção para quem produz.',
     description: 'Cobertura para toda a cadeia do agronegócio.',
@@ -158,7 +180,7 @@ const CATEGORIES: Category[] = [
     ],
   },
   {
-    number: '04',
+    number: '05',
     title: 'Seguro Internacional',
     note: 'Sua carga protegida além das fronteiras.',
     description: 'Segurança para importação e exportação.',
@@ -176,7 +198,7 @@ const CATEGORIES: Category[] = [
     ],
   },
   {
-    number: '05',
+    number: '06',
     title: 'Seguros Especiais',
     note: 'Soluções sob medida para operações complexas.',
     description: 'Instrumentos financeiros que protegem contratos e recebíveis.',
@@ -205,7 +227,7 @@ function Seguros() {
           Seguros
         </div>
 
-        <h1 className="mb-6 max-w-190 text-[44px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-3xl">
+        <h1 className="mb-6 max-w-190 text-[52px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-4xl">
           <span className="relative inline-block">
             Todos os
             <span
@@ -216,8 +238,14 @@ function Seguros() {
           ramos de seguro em um único lugar.
         </h1>
 
+        <p className="mb-2 max-w-160 text-lg text-text max-lg:text-base">
+          Seguro é uma questão de confiança, nossa assinatura há mais de 18 anos.
+        </p>
+
         <p className="mb-10 max-w-160 text-lg text-text max-lg:text-base">
-          Seguro é uma questão de confiança — nossa assinatura há 17 anos.
+          A Avante Global trabalha com as principais seguradoras nacionais e
+          internacionais. Possuímos centenas de apólices emitidas em todos os
+          ramos de seguro.
         </p>
 
         <div className="mb-8 inline-flex items-center gap-2.5 rounded-full bg-emerald-50 px-5 py-2.5 text-[13px] font-semibold text-emerald-700">
@@ -227,8 +255,7 @@ function Seguros() {
               d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
             />
           </svg>
-          A Avante trabalha com as principais seguradoras nacionais e
-          internacionais.
+          Centenas de apólices emitidas em todos os ramos de seguros.
         </div>
 
         <div className="mb-8 overflow-hidden rounded-3xl bg-navy-deep p-10 max-lg:p-6">
@@ -259,13 +286,15 @@ function Seguros() {
 
         <div className="mb-10 rounded-2xl border-l-4 border-amber-glow bg-cream px-8 py-6 max-lg:px-5">
           <h4 className="mb-2 text-lg font-bold text-navy-deep">
-            Um sinistro amanhã: sua operação para ou continua?
+            Na ocorrência de eventual sinistro: está preparado para fazer essa
+            gestão?
           </h4>
           <p className="m-0 max-w-210 text-base leading-relaxed text-text">
             Qual o impacto financeiro e na imagem da empresa? Não espere a
-            tragédia acontecer para proteger o seu negócio. A Avante, com
-            expertise em gestão de risco, ajuda a reduzir a sua
-            sinistralidade.
+            tragédia acontecer para proteger o seu negócio. Com a Avante
+            Global e sua expertise em gestão de risco e seguros, ajudaremos
+            você a reduzir seus prejuízos, sua sinistralidade e o impacto na
+            imagem da sua empresa.
           </p>
         </div>
 

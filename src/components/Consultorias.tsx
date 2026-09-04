@@ -3,7 +3,7 @@ import { useState } from 'react'
 const QUESTIONS = [
   {
     number: '01',
-    text: 'Você conhece de fato o seu negócio e onde ele está na cadeia?',
+    text: 'Você conhece de fato o seu negócio e onde ele está no segmento que você atua?',
   },
   {
     number: '02',

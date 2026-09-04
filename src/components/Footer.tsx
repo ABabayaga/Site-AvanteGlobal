@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/logo.svg'
 
 const NAV_LINKS = [
   { label: 'Institucional', to: '/institucional' },
   { label: 'Seguros', to: '/seguros' },
-  { label: 'Tecnologias', to: '/tecnologias' },
+  { label: 'Gestão de Risco', to: '/tecnologias' },
   { label: 'Consultorias', to: '/consultorias' },
   { label: 'Parceiros', to: '/parceiros' },
 ]
@@ -23,14 +22,14 @@ function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-navy">
-      <div className="mx-auto grid max-w-360 grid-cols-[minmax(0,420px)_auto_auto] justify-between gap-10 px-10 pt-16 pb-12 max-lg:grid-cols-1 max-lg:px-5 max-lg:pt-12 max-lg:pb-8">
+    <footer className="relative rounded-t-[2.5rem] bg-navy max-lg:rounded-t-3xl">
+      <div className="mx-auto grid max-w-360 grid-cols-[1fr_auto_1fr] items-start gap-10 px-10 pt-10 pb-8 max-lg:grid-cols-1 max-lg:px-5 max-lg:pt-8 max-lg:pb-6">
         <div>
           <Link to="/" className="inline-flex items-center">
             <img
-              src={logo}
+              src="/logolight.png"
               alt="Avante Global"
-              className="h-10 w-auto brightness-0 invert"
+              className="h-14 w-auto"
             />
           </Link>
           <p className="mt-5 max-w-95 text-[15px] leading-relaxed text-text-onDark max-lg:max-w-none">
@@ -39,11 +38,11 @@ function Footer() {
           </p>
         </div>
 
-        <nav>
+        <nav className="justify-self-center max-lg:justify-self-start">
           <h3 className="mb-5 text-[13px] font-bold tracking-[1.5px] text-cream uppercase">
             Navegação
           </h3>
-          <ul className="m-0 flex list-none flex-col gap-4 p-0">
+          <ul className="m-0 flex list-none flex-col items-start gap-4 p-0">
             {NAV_LINKS.map(({ label, to }) => (
               <li key={label}>
                 <Link
@@ -57,7 +56,7 @@ function Footer() {
           </ul>
         </nav>
 
-        <div>
+        <div className="justify-self-end max-lg:justify-self-start">
           <h3 className="mb-5 text-[13px] font-bold tracking-[1.5px] text-cream uppercase">
             Contato
           </h3>
@@ -88,16 +87,10 @@ function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-360 items-center justify-between gap-4 border-t border-cream/12 px-10 py-6 text-sm max-lg:flex-col max-lg:items-start max-lg:px-5">
+      <div className="mx-auto flex max-w-360 items-center justify-center gap-4 border-t border-cream/12 px-10 py-4 text-sm max-lg:flex-col max-lg:px-5">
         <p className="text-cream/50">
           © {year} Avante Global Seguros e Consultoria Empresarial.
         </p>
-        <a
-          href="https://avanteglobalseguros.com.br"
-          className="text-cream/50 no-underline hover:text-gold"
-        >
-          avanteglobalseguros.com.br
-        </a>
       </div>
 
       <a

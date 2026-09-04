@@ -4,18 +4,18 @@ const NAV_LINKS = [
   { label: 'Início', to: '/' },
   { label: 'Institucional', to: '/institucional' },
   { label: 'Seguros', to: '/seguros' },
-  { label: 'Tecnologias', to: '/tecnologias' },
+  { label: 'Gestão de Risco', to: '/tecnologias' },
   { label: 'Consultorias', to: '/consultorias' },
   { label: 'Parceiros', to: '/parceiros' },
-  { label: 'Novidades', to: '/novidades' },
+  { label: 'Você sabia?', to: '/novidades' },
 ]
 
 function Header() {
   return (
-    <header className="border-b border-ice-border bg-ice">
-      <div className="mx-auto flex max-w-360 items-center justify-between gap-8 px-10 py-5 max-lg:flex-wrap max-lg:px-5 max-lg:py-4">
+    <header className="fixed inset-x-3 top-3 z-50 sm:inset-x-6 sm:top-4 lg:inset-x-10 lg:top-5">
+      <div className="mx-auto flex max-w-360 items-center justify-between gap-8 rounded-2xl border border-ice-border bg-ice/95 px-10 py-3 shadow-[0_10px_30px_rgba(20,27,46,0.18)] backdrop-blur-md max-lg:flex-wrap max-lg:px-5 max-lg:py-2">
         <Link to="/" className="flex shrink-0 items-center">
-          <img src="/avantedark.png" alt="Avante Global" className="h-24 w-auto" />
+          <img src="/logodark.png" alt="Avante Global" className="h-18 w-auto" />
         </Link>
 
         <nav>

@@ -27,7 +27,7 @@ function Novidades() {
     <section id="novidades" className="bg-ice py-24 font-hero max-lg:py-14">
       <div className="mx-auto max-w-360 px-10 max-lg:px-5">
         <div className="mb-6 inline-flex items-center rounded-full bg-sky-accent/15 px-5 py-2.5 text-[13px] font-semibold text-blue">
-          Novidades
+          Você sabia?
         </div>
 
         <h2 className="mb-6 text-[44px] leading-[1.15] font-extrabold tracking-[-0.5px] text-navy-deep max-lg:text-3xl">

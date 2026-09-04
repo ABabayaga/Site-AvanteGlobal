@@ -14,23 +14,25 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <Inicio />
-            </>
-          }
-        />
-        <Route path="/institucional" element={<Institucional />} />
-        <Route path="/seguros" element={<Seguros />} />
-        <Route path="/tecnologias" element={<Tecnologias />} />
-        <Route path="/consultorias" element={<Consultorias />} />
-        <Route path="/parceiros" element={<Parceiros />} />
-        <Route path="/novidades" element={<Novidades />} />
-      </Routes>
+      <main className="pt-28 max-lg:pt-24">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Inicio />
+              </>
+            }
+          />
+          <Route path="/institucional" element={<Institucional />} />
+          <Route path="/seguros" element={<Seguros />} />
+          <Route path="/tecnologias" element={<Tecnologias />} />
+          <Route path="/consultorias" element={<Consultorias />} />
+          <Route path="/parceiros" element={<Parceiros />} />
+          <Route path="/novidades" element={<Novidades />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   )
