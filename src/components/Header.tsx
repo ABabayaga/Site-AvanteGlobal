@@ -29,7 +29,7 @@ function Header() {
     <header className="fixed inset-x-3 top-3 z-50 sm:inset-x-6 sm:top-4 lg:inset-x-10 lg:top-5">
       <div className="mx-auto flex max-w-360 items-center justify-between gap-8 rounded-2xl border border-ice-border bg-ice/95 px-10 py-3 shadow-[0_10px_30px_rgba(20,27,46,0.18)] backdrop-blur-md max-lg:px-4 max-lg:py-2">
         <Link to="/" className="flex shrink-0 items-center" onClick={closeMenu}>
-          <img src="/logodark.png" alt="Avante Global" className="h-18 w-auto max-lg:h-11" />
+          <img src="/logodark.png" alt="Avante Global" className="h-20 w-auto max-lg:h-11" />
         </Link>
 
         <nav className="max-lg:hidden">
