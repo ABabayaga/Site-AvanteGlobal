@@ -73,7 +73,7 @@ function Hero() {
           </Link>
         </div>
 
-        <dl data-reveal-immediate className="m-0 mb-7 flex flex-wrap gap-14 max-lg:gap-8">
+        {/* <dl data-reveal-immediate className="m-0 mb-7 flex flex-wrap gap-14 max-lg:gap-8">
           {STATS.map(({ value, label }) => (
             <div key={label}>
               <dt className="text-[38px] leading-none font-extrabold text-white max-lg:text-3xl">
@@ -84,7 +84,7 @@ function Hero() {
               </dd>
             </div>
           ))}
-        </dl>
+        </dl> */}
 
         <div
           data-reveal-immediate
