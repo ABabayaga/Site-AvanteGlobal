@@ -503,15 +503,20 @@ function Seguros() {
             apólice, entendemos a carga, o trajeto e os pontos de exposição.
           </p>
 
-          <div className="-mx-10 flex scrollbar-none gap-3 overflow-x-auto px-10 pb-1 max-lg:-mx-6 max-lg:px-6">
-            {CARGO_TAGS.map((tag) => (
-              <span
-                key={tag}
-                className="shrink-0 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm whitespace-nowrap text-white/85"
-              >
-                {tag}
-              </span>
-            ))}
+          <div className="-mx-10 overflow-hidden pb-1 max-lg:-mx-6">
+            <div
+              className="flex w-max gap-3"
+              style={{ animation: "marquee-ltr 28s linear infinite reverse" }}
+            >
+              {[...CARGO_TAGS, ...CARGO_TAGS].map((tag, i) => (
+                <span
+                  key={`${tag}-${i}`}
+                  className="shrink-0 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm whitespace-nowrap text-white/85"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
