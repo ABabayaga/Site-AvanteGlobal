@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import useScrollReveal from '../hooks/useScrollReveal'
 
-const STATS = [
+/* onst STATS = [
   { value: '35+', label: 'Anos em logística' },
   { value: '18+', label: 'Anos em seguros' },
   { value: '100%', label: 'Abrangência nacional' },
 ]
-
+ */
 function Hero() {
   const scope = useScrollReveal<HTMLElement>()
 
