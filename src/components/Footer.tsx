@@ -18,6 +18,12 @@ const EMAIL_CONTACTS = [
   'andrea@avanteglobalseguros.com.br',
 ]
 
+const SOCIAL_LINKS = [
+  { label: 'Facebook', icon: '/facebook.png', href: 'https://www.facebook.com/profile.php?id=61593978566610&locale=pt_BR' },
+  { label: 'Instagram', icon: '/instagram.png', href: 'https://www.instagram.com/avanteglobalseguros/' },
+  { label: 'LinkedIn', icon: '/linkedin.png', href: 'https://www.linkedin.com/company/avante-global-seguros/about/?viewAsMember=true' },
+]
+
 function Footer() {
   const year = new Date().getFullYear()
 
@@ -60,7 +66,7 @@ function Footer() {
           <h3 className="mb-5 text-[13px] font-bold tracking-[1.5px] text-cream uppercase">
             Contato
           </h3>
-          <ul className="m-0 flex list-none flex-col gap-4 p-0">
+          <ul className="m-0 flex list-none flex-col gap-0 p-0">
             {PHONE_CONTACTS.map(({ label, href }) => (
               <li key={label}>
                 <a
@@ -80,6 +86,25 @@ function Footer() {
                   className="text-[15px] whitespace-nowrap text-text-onNavy no-underline hover:text-gold"
                 >
                   {email}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="mt-8 mb-5 pt-4 text-[13px] font-bold tracking-[1.5px] text-cream uppercase">
+            Rede Social
+          </h3>
+          <ul className="m-0 pt-2 flex list-none items-center gap-4 p-0">
+            {SOCIAL_LINKS.map(({ label, icon, href }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-cream/10 transition-colors hover:bg-gold"
+                >
+                  <img src={icon} alt={label} className="h-7 w-7" />
                 </a>
               </li>
             ))}
