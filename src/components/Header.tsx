@@ -54,7 +54,7 @@ function Header() {
 
         <a
           href="#contato"
-          className="shrink-0 rounded-full bg-navy px-7 py-3.5 text-[15px] font-semibold text-white no-underline hover:bg-navy-deep max-lg:hidden"
+          className="shrink-0 rounded-full bg-navy px-7 py-3.5 text-[15px] font-semibold text-white no-underline hover:bg-navy-light max-lg:hidden"
         >
           Fale conosco
         </a>
@@ -117,7 +117,7 @@ function Header() {
         <a
           href="#contato"
           onClick={closeMenu}
-          className="mt-4 block rounded-full bg-navy px-7 py-3.5 text-center text-[15px] font-semibold text-white no-underline hover:bg-navy-deep"
+          className="mt-4 block rounded-full bg-navy px-7 py-3.5 text-center text-[15px] font-semibold text-white no-underline hover:bg-navy-light"
         >
           Fale conosco
         </a>

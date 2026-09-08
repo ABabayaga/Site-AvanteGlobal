@@ -13,7 +13,7 @@ function Hero() {
   return (
     <section
       ref={scope}
-      className="relative -mt-28 overflow-hidden bg-navy-deep pt-28 font-hero max-lg:-mt-24 max-lg:pt-24"
+      className="relative -mt-28 overflow-hidden bg-navy-light pt-28 font-hero max-lg:-mt-24 max-lg:pt-24"
       id="inicio"
     >
       <img

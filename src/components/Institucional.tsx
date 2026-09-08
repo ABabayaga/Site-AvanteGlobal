@@ -220,7 +220,7 @@ function Institucional() {
           <Link
             data-reveal
             to="/institucional"
-            className="inline-flex items-center gap-2.5 rounded-full bg-navy-deep px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-white no-underline hover:bg-navy"
+            className="inline-flex items-center gap-2.5 rounded-full bg-navy-light px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-white no-underline hover:bg-navy"
           >
             Conheça a Avante de perto, sem compromisso
             <span aria-hidden="true">→</span>

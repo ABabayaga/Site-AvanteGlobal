@@ -489,7 +489,7 @@ function Seguros() {
           <BrazilMap /> 
         </div>
 
-        <div data-reveal className="mb-8 overflow-hidden rounded-3xl bg-navy-deep p-10 max-lg:p-6">
+        <div data-reveal className="mb-8 overflow-hidden rounded-3xl bg-navy-light p-10 max-lg:p-6">
           <div className="mb-5 inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white/80">
             Transporte é o nosso território
           </div>
@@ -597,7 +597,7 @@ function Seguros() {
                               className={`mb-3 inline-flex w-fit items-center rounded-full px-3 py-1 text-[11px] font-bold tracking-wide uppercase ${
                                 item.badge.startsWith('OBRIGATÓRIO')
                                   ? 'bg-sky-accent/15 text-blue'
-                                  : 'bg-navy-deep/8 text-steel'
+                                  : 'bg-navy-light/8 text-steel'
                               }`}
                             >
                               {item.badge}

@@ -103,7 +103,7 @@ function Inicio() {
                 data-reveal
                 className={`rounded-2xl p-10 max-lg:p-8 ${
                   dark
-                    ? 'bg-navy-deep'
+                    ? 'bg-navy-light'
                     : 'border border-ice-border bg-white'
                 }`}
               >
@@ -206,7 +206,7 @@ function Inicio() {
 
           <div
             data-reveal
-            className="mb-8 grid grid-cols-2 overflow-hidden rounded-2xl bg-navy-deep max-lg:grid-cols-1"
+            className="mb-8 grid grid-cols-2 overflow-hidden rounded-2xl bg-navy-light max-lg:grid-cols-1"
           >
             <div className="flex flex-col justify-center p-12 max-lg:p-8">
               <div className="mb-6 inline-flex w-fit items-center rounded-full bg-white/10 px-5 py-2 text-[13px] font-semibold text-white/90">
