@@ -43,7 +43,7 @@ function Hero() {
           data-reveal
           className="mb-7 max-w-190 text-[56px] leading-[1.12] font-extrabold tracking-[-0.5px] text-white max-lg:text-4xl"
         >
-          Avante Global:{' '}
+          Avante Global Seguros:{' '}
           <span className="text-sky-accent">solução total</span> para a sua
           empresa, a nível nacional.
         </h1>

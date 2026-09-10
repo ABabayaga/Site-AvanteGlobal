@@ -75,7 +75,7 @@ function Institucional() {
             <img
               data-reveal
               src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=80"
-              alt="Colaborador da Avante Global conferindo estoque em um centro de distribuição"
+              alt="Colaborador da Avante Global Seguros conferindo estoque em um centro de distribuição"
               className="aspect-4/3 w-full rounded-2xl object-cover"
             />
 
@@ -124,7 +124,7 @@ function Institucional() {
             <img
               data-reveal
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80"
-              alt="Consultores da Avante Global em reunião de estratégia"
+              alt="Consultores da Avante Global Seguros em reunião de estratégia"
               className="aspect-4/3 w-full rounded-2xl object-cover"
             />
 

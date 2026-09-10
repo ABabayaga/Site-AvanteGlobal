@@ -82,7 +82,7 @@ function Tecnologias() {
           <img
             data-reveal
             src="/risco.png"
-            alt="Torre de controle da Avante Global monitorando rotas e veículos em tempo real"
+            alt="Torre de controle da Avante Global Seguros monitorando rotas e veículos em tempo real"
             className="aspect-2/1 w-full rounded-2xl object-cover"
           />
 

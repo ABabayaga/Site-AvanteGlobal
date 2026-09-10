@@ -101,7 +101,7 @@ function BrazilMap() {
         viewBox="-10 -10 335 335"
         className="relative mx-auto w-full max-w-90"
         role="img"
-        aria-label="Mapa do Brasil com pontos de cobertura da Avante Global"
+        aria-label="Mapa do Brasil com pontos de cobertura da Avante Global Seguros"
       >
         <defs>
           <linearGradient id="brMapFill" x1="0" y1="0" x2="1" y2="1">
@@ -467,7 +467,7 @@ function Seguros() {
             </p>
 
             <p data-reveal className="mb-10 max-w-160 text-lg text-text max-lg:text-base">
-              A Avante Global trabalha com as principais seguradoras nacionais e
+              A Avante Global Seguros trabalha com as principais seguradoras nacionais e
               internacionais. Possuímos centenas de apólices emitidas em todos os
               ramos de seguro.
             </p>

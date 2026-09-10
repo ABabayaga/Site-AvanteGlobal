@@ -229,7 +229,7 @@ function Inicio() {
             </div>
             <img
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
-              alt="Equipe da Avante Global analisando o impacto da reforma tributária no frete"
+              alt="Equipe da Avante Global Seguros analisando o impacto da reforma tributária no frete"
               className="h-full max-h-100 w-full object-cover max-lg:max-h-70"
             />
           </div>
@@ -239,7 +239,7 @@ function Inicio() {
             className="flex flex-col items-center justify-center gap-4 rounded-2xl bg-navy py-14 text-center max-lg:py-10"
           >
             <h3 className="mx-auto max-w-180 px-8 text-[28px] leading-tight font-extrabold text-white max-lg:text-2xl">
-              Avante Global: atuação com foco do cliente e solução total em
+              Avante Global Seguros: atuação com foco do cliente e solução total em
               nível nacional.
             </h3>
             <p className="m-0 text-[13px] font-semibold tracking-[1.5px] text-sky-accent uppercase">
@@ -285,7 +285,7 @@ function Inicio() {
             <img
               data-reveal
               src="/inicio.png"
-              alt="Time da Avante Global monitorando rotas de transporte em tempo real"
+              alt="Time da Avante Global Seguros monitorando rotas de transporte em tempo real"
               className="ml-auto aspect-video w-[90%] rounded-2xl object-cover max-lg:w-full"
             />
           </div>

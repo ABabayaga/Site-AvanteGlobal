@@ -11,11 +11,13 @@ const NAV_LINKS = [
 const PHONE_CONTACTS = [
   { label: '(62) 99444-0500 · WhatsApp', href: 'https://wa.me/5562994440500' },
   { label: '(62) 99444-2177 · WhatsApp', href: 'https://wa.me/5562994442177' },
+  { label: '(62) 98583-8959  · Comercial' },
 ]
 
 const EMAIL_CONTACTS = [
   'rosemar@avanteglobalseguros.com.br',
   'andrea@avanteglobalseguros.com.br',
+  'comercial@avanteglobalseguros.com.br'
 ]
 
 const SOCIAL_LINKS = [
@@ -34,7 +36,7 @@ function Footer() {
           <Link to="/" className="inline-flex items-center">
             <img
               src="/logolight.png"
-              alt="Avante Global"
+              alt="Avante Global Seguros"
               className="h-14 w-auto"
             />
           </Link>
