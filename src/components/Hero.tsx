@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import useScrollReveal from '../hooks/useScrollReveal'
+import BrazilMap from './BrazilMap'
 
 /* onst STATS = [
   { value: '35+', label: 'Anos em logística' },
@@ -16,14 +17,8 @@ function Hero() {
       className="relative -mt-28 overflow-hidden bg-navy-light pt-28 font-hero max-lg:-mt-24 max-lg:pt-24"
       id="inicio"
     >
-      <img
-        src="/truck3.jpg"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover object-right opacity-60"
-      />
       <div
-        className="absolute inset-0 bg-linear-to-r from-navy-deep via-navy-deep/95 via-40% to-navy-deep/10"
+        className="absolute inset-0 bg-linear-to-r from-navy-deep via-navy-deep/95 via-40% to-navy-deep/70"
         aria-hidden="true"
       />
       <div
@@ -31,80 +26,84 @@ function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto max-w-360 px-10 pt-14 pb-12 max-lg:px-5 max-lg:pt-10 max-lg:pb-10">
-        <div
-          data-reveal
-          className="mb-8 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-white/90"
-        >
-          Seguros · Consultoria · Tecnologia
-        </div>
-
-        <h1
-          data-reveal
-          className="mb-7 max-w-190 text-[56px] leading-[1.12] font-extrabold tracking-[-0.5px] text-white max-lg:text-4xl"
-        >
-          Avante Global Seguros:{' '}
-          <span className="text-sky-accent">solução total</span> para a sua
-          empresa, a nível nacional.
-        </h1>
-
-        <p
-          data-reveal
-          className="mb-10 max-w-135 text-lg leading-relaxed text-text-onDark max-lg:text-base"
-        >
-          Especialistas em todos os ramos de seguros e em gestão de negócios de
-          sucesso, com abrangência nacional e tecnologia para logística e
-          transporte.
-        </p>
-
-        <div data-reveal className="mb-10 flex flex-wrap items-center gap-4 max-lg:mb-8">
-          <a
-            href="#contato"
-            className="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-navy-deep no-underline hover:bg-white/90"
+      <div className="relative mx-auto flex max-w-360 items-center gap-16 px-10 pt-14 pb-12 max-lg:flex-col max-lg:items-stretch max-lg:gap-10 max-lg:px-5 max-lg:pt-10 max-lg:pb-10">
+        <div className="flex-1">
+          <div
+            data-reveal
+            className="mb-8 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-white/90"
           >
-            Fale com um especialista
-            <span aria-hidden="true">→</span>
-          </a>
-          <Link
-            to="/institucional"
-            className="inline-flex items-center gap-2.5 rounded-full border border-white/30 px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-white no-underline hover:border-white/60"
+            Seguros · Consultoria · Tecnologia
+          </div>
+
+          <h1
+            data-reveal
+            className="mb-7 max-w-190 text-[56px] leading-[1.12] font-extrabold tracking-[-0.5px] text-white max-lg:text-4xl"
           >
-            Conheça a Avante
-          </Link>
-        </div>
+            Avante Global Seguros:{' '}
+            <span className="text-sky-accent">solução total</span> para a sua
+            empresa, a nível nacional.
+          </h1>
 
-        {/* <dl data-reveal-immediate className="m-0 mb-7 flex flex-wrap gap-14 max-lg:gap-8">
-          {STATS.map(({ value, label }) => (
-            <div key={label}>
-              <dt className="text-[38px] leading-none font-extrabold text-white max-lg:text-3xl">
-                {value}
-              </dt>
-              <dd className="mt-2 text-[11px] font-semibold tracking-[1.5px] text-text-onDark-muted uppercase">
-                {label}
-              </dd>
-            </div>
-          ))}
-        </dl> */}
-
-        <div
-          data-reveal-immediate
-          className="flex items-center gap-3 border-t border-white/10 pt-6 text-sm text-text-onDark-muted"
-        >
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/25">
-            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 text-white/80">
-              <path
-                fill="currentColor"
-                d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm0 2.2 6 2.2v4.6c0 4-2.6 7.6-6 8.9-3.4-1.3-6-4.9-6-8.9V6.4l6-2.2Z"
-              />
-            </svg>
-          </span>
-          <p className="m-0">
-            <span className="font-semibold text-white">
-              Seguro é uma questão de confiança.
-            </span>{' '}
-            Nossa assinatura há mais de 18 anos.
+          <p
+            data-reveal
+            className="mb-10 max-w-135 text-lg leading-relaxed text-text-onDark max-lg:text-base"
+          >
+            Especialistas em todos os ramos de seguros e em gestão de negócios
+            de sucesso, com abrangência nacional e gestão de risco para
+            logística e transporte.
           </p>
+
+          <div data-reveal className="mb-10 flex flex-wrap items-center gap-4 max-lg:mb-8">
+            <a
+              href="#contato"
+              className="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-navy-deep no-underline hover:bg-white/90"
+            >
+              Fale com um especialista
+              <span aria-hidden="true">→</span>
+            </a>
+            <Link
+              to="/institucional"
+              className="inline-flex items-center gap-2.5 rounded-full border border-white/30 px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-white no-underline hover:border-white/60"
+            >
+              Conheça a Avante
+            </Link>
+          </div>
+
+          {/* <dl data-reveal-immediate className="m-0 mb-7 flex flex-wrap gap-14 max-lg:gap-8">
+            {STATS.map(({ value, label }) => (
+              <div key={label}>
+                <dt className="text-[38px] leading-none font-extrabold text-white max-lg:text-3xl">
+                  {value}
+                </dt>
+                <dd className="mt-2 text-[11px] font-semibold tracking-[1.5px] text-text-onDark-muted uppercase">
+                  {label}
+                </dd>
+              </div>
+            ))}
+          </dl> */}
+
+          <div
+            data-reveal-immediate
+            className="flex items-center gap-3 border-t border-white/10 pt-6 text-sm text-text-onDark-muted"
+          >
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/25">
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 text-white/80">
+                <path
+                  fill="currentColor"
+                  d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm0 2.2 6 2.2v4.6c0 4-2.6 7.6-6 8.9-3.4-1.3-6-4.9-6-8.9V6.4l6-2.2Z"
+                />
+              </svg>
+            </span>
+            <p className="m-0">
+              <span className="font-semibold text-white">
+                Seguro é uma questão de confiança.
+              </span>{' '}
+              Nossa assinatura há mais de 18 anos.
+            </p>
+          </div>
         </div>
+
+        <BrazilMap variant="bare" />
       </div>
 
       <a
