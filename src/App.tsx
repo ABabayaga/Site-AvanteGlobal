@@ -13,6 +13,11 @@ import Footer from './components/Footer'
 function App() {
   return (
     <>
+      <div
+        className="pointer-events-none fixed inset-0 z-30 bg-cover bg-center opacity-[0.03]"
+        style={{ backgroundImage: 'url(/marcadagua.jpeg)' }}
+        aria-hidden="true"
+      />
       <Header />
       <main className="pt-28 max-lg:pt-24">
         <Routes>
