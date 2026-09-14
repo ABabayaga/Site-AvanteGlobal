@@ -32,7 +32,7 @@ function Hero() {
             data-reveal
             className="mb-8 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-white/90"
           >
-            Seguros · Consultoria · Tecnologia
+            Seguros · Consultoria · Gestão de Risco
           </div>
 
           <h1
