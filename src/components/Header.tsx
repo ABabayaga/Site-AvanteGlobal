@@ -25,6 +25,8 @@ function Header() {
 
   const closeMenu = () => setIsOpen(false)
 
+  const scrollToTop = () => window.scrollTo({ top: 0 })
+
   return (
     <header className="fixed inset-x-3 top-3 z-50 sm:inset-x-6 sm:top-4 lg:inset-x-10 lg:top-5">
       <div className="mx-auto flex max-w-360 items-center justify-between gap-8 rounded-2xl border border-ice-border bg-ice/95 px-10 py-3 shadow-[0_10px_30px_rgba(20,27,46,0.18)] backdrop-blur-md max-lg:px-4 max-lg:py-2">
@@ -39,6 +41,7 @@ function Header() {
                 <NavLink
                   to={to}
                   end={to === '/'}
+                  onClick={scrollToTop}
                   className={({ isActive }) =>
                     `text-base font-semibold whitespace-nowrap no-underline hover:opacity-70 ${
                       isActive ? 'text-blue' : 'text-ink'
@@ -100,7 +103,10 @@ function Header() {
                 <NavLink
                   to={to}
                   end={to === '/'}
-                  onClick={closeMenu}
+                  onClick={() => {
+                    closeMenu()
+                    scrollToTop()
+                  }}
                   className={({ isActive }) =>
                     `block rounded-xl px-3 py-3 text-base font-semibold no-underline ${
                       isActive ? 'text-blue' : 'text-ink'

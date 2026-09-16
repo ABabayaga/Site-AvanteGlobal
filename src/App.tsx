@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
+import ScrollToTop from './components/ScrollToTop'
 import Hero from './components/Hero'
 import Inicio from './components/Inicio'
 import Institucional from './components/Institucional'
@@ -18,6 +19,7 @@ function App() {
         style={{ backgroundImage: 'url(/marcadagua.jpeg)' }}
         aria-hidden="true"
       />
+      <ScrollToTop />
       <Header />
       <main className="pt-28 max-lg:pt-24">
         <Routes>
