@@ -45,12 +45,91 @@ const QUESTIONS = [
 ]
 
 const FRENTES = [
-  { number: '01', title: 'Gestão Operacional' },
-  { number: '02', title: 'Controladoria e Financeiro' },
-  { number: '03', title: 'Organizacional e Pessoas' },
-  { number: '04', title: 'Gestão de Risco e Seguros' },
-  { number: '05', title: 'Comercial, Sistemas e Supply Chain' },
-  { number: '06', title: 'Mentoria e Gestão Futura' },
+  {
+    number: '01',
+    title: 'Gestão Operacional',
+    topics: [
+      'Análise SWOT',
+      'Painel logístico',
+      'Gerenciamento de risco',
+      'Avarias e extravios',
+      'Rotas e custos',
+      'Grandes contas',
+      'Combustível e pneus',
+      'Segurança patrimonial',
+      'KPI / BI',
+      'Estoque como capital',
+    ],
+  },
+  {
+    number: '02',
+    title: 'Controladoria e Financeiro',
+    topics: [
+      'DRE por competência',
+      'Plano de contas',
+      'Custo por rota e km',
+      'Precificação do frete',
+      'Contas a pagar e receber',
+      'Crédito e cobrança',
+      'Saneamento de dívidas',
+      'Investimentos',
+      'Conciliações',
+    ],
+  },
+  {
+    number: '03',
+    title: 'Organizacional e Pessoas',
+    topics: [
+      'Organograma',
+      'Matriz de responsabilidades',
+      'Treinamentos',
+      'Carreiras e talentos',
+      'Plano de metas',
+      'Gestão por competências',
+      'Indicadores',
+      'Qualidade (5S)',
+      'Academia de Líderes',
+    ],
+  },
+  {
+    number: '04',
+    title: 'Gestão de Risco e Seguros',
+    topics: [
+      'Todos os ramos comparados',
+      'Rastreamento e escolta',
+      'Gerenciadora de risco',
+      'Avarias mapeadas',
+      'Torre de controle',
+      'Ad valorem e GRIS',
+    ],
+  },
+  {
+    number: '05',
+    title: 'Comercial, Sistemas e Supply Chain',
+    topics: [
+      'Estratégia e metas',
+      'CRM inteligente',
+      'Pricing de cotações',
+      'Retenção de clientes',
+      'TMS / ERP',
+      'Apps e KPIs',
+      'Logística 4.0',
+      'WMS e armazenagem',
+    ],
+  },
+  {
+    number: '06',
+    title: 'Mentoria e Gestão Futura',
+    topics: [
+      'Mentoria CEO e diretores',
+      'Sucessores',
+      'Continuidade do negócio',
+      'Meritocracia',
+      'Treinamento PDG',
+      'Inteligência emocional',
+      'Coach de resultados',
+    ],
+  },
 ]
 
 function Consultorias() {
@@ -148,7 +227,7 @@ function Consultorias() {
           </p>
 
           <div className="flex flex-col gap-4">
-            {FRENTES.map(({ number, title }) => {
+            {FRENTES.map(({ number, title, topics }) => {
               const isOpen = openFrente === number
               return (
                 <div
@@ -176,8 +255,15 @@ function Consultorias() {
                     </span>
                   </button>
                   {isOpen && (
-                    <div className="px-7 pb-6 text-base leading-relaxed text-text">
-                      Conteúdo em breve.
+                    <div className="flex flex-wrap gap-3 px-7 pb-6">
+                      {topics.map((topic) => (
+                        <span
+                          key={topic}
+                          className="rounded-full border border-ice-border px-5 py-2.5 text-sm font-medium text-text"
+                        >
+                          {topic}
+                        </span>
+                      ))}
                     </div>
                   )}
                 </div>
