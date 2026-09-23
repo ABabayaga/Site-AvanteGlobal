@@ -8,6 +8,10 @@ import BrazilMap from './BrazilMap'
   { value: '100%', label: 'Abrangência nacional' },
 ]
  */
+
+const WHATSAPP_MESSAGE =
+  'Vamos conversar sobre o que você precisa?\n\nNossa equipe está pronta para entender sua necessidade e direcionar você para a solução mais adequada.'
+
 function Hero() {
   const scope = useScrollReveal<HTMLElement>()
 
@@ -55,7 +59,9 @@ function Hero() {
 
           <div data-reveal className="mb-10 flex flex-wrap items-center gap-4 max-lg:mb-8">
             <a
-              href="#contato"
+              href={`https://wa.me/5562994440500?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-navy-deep no-underline hover:bg-white/90"
             >
               Fale com um especialista

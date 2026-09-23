@@ -14,6 +14,9 @@ const PHONE_CONTACTS = [
   { label: '(62) 98583-8959  · Comercial' },
 ]
 
+const WHATSAPP_MESSAGE =
+  'Vamos conversar sobre o que você precisa?\n\nNossa equipe está pronta para entender sua necessidade e direcionar você para a solução mais adequada.'
+
 const EMAIL_CONTACTS = [
   'rosemar@avanteglobalseguros.com.br',
   'andrea@avanteglobalseguros.com.br',
@@ -132,7 +135,7 @@ function Footer() {
             </div>
 
       <a
-        href="https://wa.me/5562994440500"
+        href={`https://wa.me/5562994440500?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
         target="_blank"
         rel="noreferrer"
         className="fixed right-6 bottom-6 z-20 inline-flex items-center gap-2.5 rounded-full bg-gold px-5.5 py-3.5 text-[15px] font-bold text-ink no-underline shadow-[0_12px_24px_-8px_rgba(0,0,0,0.4)] hover:bg-gold-light"

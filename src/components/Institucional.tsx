@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom'
 import useScrollReveal from '../hooks/useScrollReveal'
+
+const CONTACT_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfJ4p2w4mUsujeVFjs4ix8lIeSSltzgciheCCN836iKHUQ_fw/viewform'
 
 const PILARES = [
   'Visão externa',
@@ -217,14 +219,16 @@ function Institucional() {
             ))}
           </div>
 
-          <Link
+          <a
             data-reveal
-            to="/institucional"
+            href={CONTACT_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 rounded-full bg-navy-light px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-white no-underline hover:bg-navy"
           >
             Conheça a Avante de perto, sem compromisso
             <span aria-hidden="true">→</span>
-          </Link>
+          </a>
         </div>
       </section>
     </>

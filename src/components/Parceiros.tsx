@@ -1,5 +1,8 @@
 import useScrollReveal from '../hooks/useScrollReveal'
 
+const CONTACT_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfJ4p2w4mUsujeVFjs4ix8lIeSSltzgciheCCN836iKHUQ_fw/viewform'
+
 const PARCEIRO_TAGS = [
   'Gerenciadoras de risco',
   'TMS e WMS',
@@ -76,7 +79,9 @@ function Parceiros() {
             </p>
 
             <a
-              href="#contato"
+              href={CONTACT_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 rounded-full bg-blue px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-white no-underline hover:bg-blue/90"
             >
               Quero indicar
