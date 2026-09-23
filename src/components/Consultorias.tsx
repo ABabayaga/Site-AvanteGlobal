@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import useScrollReveal from '../hooks/useScrollReveal'
 
+const CONTACT_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfJ4p2w4mUsujeVFjs4ix8lIeSSltzgciheCCN836iKHUQ_fw/viewform'
+
 const QUESTIONS = [
   {
     number: '01',
@@ -190,7 +193,9 @@ function Consultorias() {
                 um plano de ação.
               </p>
               <a
-                href="#contato"
+                href={CONTACT_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-navy-deep no-underline hover:bg-white/90"
               >
                 Faça sua consultoria sem compromisso
@@ -292,7 +297,9 @@ function Consultorias() {
               </p>
 
               <a
-                href="#contato"
+                href={CONTACT_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-2 inline-flex w-fit items-center gap-2.5 rounded-full bg-blue px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-white no-underline hover:bg-blue/90"
               >
                 Diagnóstico sem compromisso

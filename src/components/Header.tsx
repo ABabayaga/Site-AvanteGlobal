@@ -11,6 +11,9 @@ const NAV_LINKS = [
   { label: 'Você sabia?', to: '/novidades' },
 ]
 
+const CONTACT_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfJ4p2w4mUsujeVFjs4ix8lIeSSltzgciheCCN836iKHUQ_fw/viewform'
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -56,7 +59,9 @@ function Header() {
         </nav>
 
         <a
-          href="#contato"
+          href={CONTACT_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="shrink-0 rounded-full bg-navy px-7 py-3.5 text-[15px] font-semibold text-white no-underline hover:bg-navy-light max-lg:hidden"
         >
           Fale conosco
@@ -121,7 +126,9 @@ function Header() {
         </nav>
 
         <a
-          href="#contato"
+          href={CONTACT_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={closeMenu}
           className="mt-4 block rounded-full bg-navy px-7 py-3.5 text-center text-[15px] font-semibold text-white no-underline hover:bg-navy-light"
         >
