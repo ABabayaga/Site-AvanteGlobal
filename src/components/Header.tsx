@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { CONTACT_HASH } from './ContactModal'
 
 const NAV_LINKS = [
   { label: 'Início', to: '/' },
@@ -10,9 +11,6 @@ const NAV_LINKS = [
   { label: 'Parceiros', to: '/parceiros' },
   { label: 'Você sabia?', to: '/novidades' },
 ]
-
-const CONTACT_FORM_URL =
-  'https://docs.google.com/forms/d/e/1FAIpQLSfJ4p2w4mUsujeVFjs4ix8lIeSSltzgciheCCN836iKHUQ_fw/viewform'
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -58,14 +56,12 @@ function Header() {
           </ul>
         </nav>
 
-        <a
-          href={CONTACT_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to={{ hash: CONTACT_HASH }}
           className="shrink-0 rounded-full bg-navy px-7 py-3.5 text-[15px] font-semibold text-white no-underline hover:bg-navy-light max-lg:hidden"
         >
           Fale conosco
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -125,15 +121,13 @@ function Header() {
           </ul>
         </nav>
 
-        <a
-          href={CONTACT_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to={{ hash: CONTACT_HASH }}
           onClick={closeMenu}
           className="mt-4 block rounded-full bg-navy px-7 py-3.5 text-center text-[15px] font-semibold text-white no-underline hover:bg-navy-light"
         >
           Fale conosco
-        </a>
+        </Link>
       </div>
     </header>
   )

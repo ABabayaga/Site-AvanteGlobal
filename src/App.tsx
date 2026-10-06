@@ -9,6 +9,7 @@ import Tecnologias from './components/Tecnologias'
 import Consultorias from './components/Consultorias'
 import Parceiros from './components/Parceiros'
 import Novidades from './components/Novidades'
+import ContactModal from './components/ContactModal'
 import Footer from './components/Footer'
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <ContactModal />
     </>
   )
 }

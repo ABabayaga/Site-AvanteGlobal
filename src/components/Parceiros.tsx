@@ -1,7 +1,6 @@
+import { Link } from 'react-router-dom'
 import useScrollReveal from '../hooks/useScrollReveal'
-
-const CONTACT_FORM_URL =
-  'https://docs.google.com/forms/d/e/1FAIpQLSfJ4p2w4mUsujeVFjs4ix8lIeSSltzgciheCCN836iKHUQ_fw/viewform'
+import { CONTACT_HASH } from './ContactModal'
 
 const PARCEIRO_TAGS = [
   'Gerenciadoras de risco',
@@ -78,15 +77,13 @@ function Parceiros() {
               jeito simples de gerar renda indicando quem confia em você.
             </p>
 
-            <a
-              href={CONTACT_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to={{ hash: CONTACT_HASH }}
               className="inline-flex items-center gap-2.5 rounded-full bg-blue px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-white no-underline hover:bg-blue/90"
             >
               Quero indicar
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

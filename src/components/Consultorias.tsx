@@ -1,8 +1,7 @@
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import useScrollReveal from '../hooks/useScrollReveal'
-
-const CONTACT_FORM_URL =
-  'https://docs.google.com/forms/d/e/1FAIpQLSfJ4p2w4mUsujeVFjs4ix8lIeSSltzgciheCCN836iKHUQ_fw/viewform'
+import { CONTACT_HASH } from './ContactModal'
 
 const QUESTIONS = [
   {
@@ -192,15 +191,13 @@ function Consultorias() {
                 Essas são só as primeiras. Com a Avante, cada resposta vira
                 um plano de ação.
               </p>
-              <a
-                href={CONTACT_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={{ hash: CONTACT_HASH }}
                 className="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-white px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-navy-deep no-underline hover:bg-white/90"
               >
                 Faça sua consultoria sem compromisso
                 <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -296,15 +293,13 @@ function Consultorias() {
                 equipe.
               </p>
 
-              <a
-                href={CONTACT_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={{ hash: CONTACT_HASH }}
                 className="mt-2 inline-flex w-fit items-center gap-2.5 rounded-full bg-blue px-7 py-4 text-[15px] font-semibold whitespace-nowrap text-white no-underline hover:bg-blue/90"
               >
                 Diagnóstico sem compromisso
                 <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
 
             <div
