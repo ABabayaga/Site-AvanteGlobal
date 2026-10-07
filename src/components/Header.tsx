@@ -12,6 +12,16 @@ const NAV_LINKS = [
   { label: 'Você sabia?', to: '/novidades' },
 ]
 
+const EMERGENCY_LINK = { label: 'Emergência', to: '/seguros#emergencia' }
+
+function PhoneIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-4 w-4 shrink-0">
+      <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" />
+    </svg>
+  )
+}
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -36,7 +46,7 @@ function Header() {
         </Link>
 
         <nav className="max-lg:hidden">
-          <ul className="m-0 flex flex-wrap items-center gap-9 p-0">
+          <ul className="m-0 flex flex-wrap items-center gap-6 p-0">
             {NAV_LINKS.map(({ label, to }) => (
               <li key={label} className="list-none">
                 <NavLink
@@ -56,12 +66,23 @@ function Header() {
           </ul>
         </nav>
 
-        <Link
-          to={{ hash: CONTACT_HASH }}
-          className="shrink-0 rounded-full bg-navy px-7 py-3.5 text-[15px] font-semibold text-white no-underline hover:bg-navy-light max-lg:hidden"
-        >
-          Fale conosco
-        </Link>
+        <div className="flex shrink-0 items-center gap-3 max-lg:hidden">
+          <Link
+            to={EMERGENCY_LINK.to}
+            aria-label={EMERGENCY_LINK.label}
+            title={EMERGENCY_LINK.label}
+            className="inline-flex items-center gap-1.5 rounded-full bg-red-50 px-4 py-3.5 text-[15px] font-semibold whitespace-nowrap text-red-700 no-underline hover:bg-red-100"
+          >
+            <PhoneIcon />
+            <span className="max-[1400px]:hidden">{EMERGENCY_LINK.label}</span>
+          </Link>
+          <Link
+            to={{ hash: CONTACT_HASH }}
+            className="rounded-full bg-navy px-7 py-3.5 text-[15px] font-semibold whitespace-nowrap text-white no-underline hover:bg-navy-light"
+          >
+            Fale conosco
+          </Link>
+        </div>
 
         <button
           type="button"
@@ -118,6 +139,16 @@ function Header() {
                 </NavLink>
               </li>
             ))}
+            <li className="list-none">
+              <Link
+                to={EMERGENCY_LINK.to}
+                onClick={closeMenu}
+                className="flex items-center gap-2 rounded-xl px-3 py-3 text-base font-semibold text-red-700 no-underline"
+              >
+                <PhoneIcon />
+                {EMERGENCY_LINK.label}
+              </Link>
+            </li>
           </ul>
         </nav>
 

@@ -23,6 +23,13 @@ const EMAIL_CONTACTS = [
   'comercial@avanteglobalseguros.com.br'
 ]
 
+const EMERGENCY_CONTACTS = [
+  { label: 'PRF', number: '191' },
+  { label: 'SAMU', number: '192' },
+  { label: 'Bombeiros', number: '193' },
+  { label: 'ANTT', number: '166' },
+]
+
 const SOCIAL_LINKS = [
   { label: 'Facebook', icon: '/facebook.png', href: 'https://www.facebook.com/profile.php?id=61593978566610&locale=pt_BR' },
   { label: 'Instagram', icon: '/instagram.png', href: 'https://www.instagram.com/avanteglobalseguros/' },
@@ -115,6 +122,21 @@ function Footer() {
             ))}
           </ul>
         </div>
+      </div>
+
+      <div className="mx-auto flex max-w-360 flex-wrap items-center justify-center gap-x-6 gap-y-2 border-t border-cream/12 px-10 py-4 text-sm max-lg:px-5">
+        <span className="text-[13px] font-bold tracking-[1.5px] text-cream uppercase">
+          Emergência na estrada
+        </span>
+        {EMERGENCY_CONTACTS.map(({ label, number }) => (
+          <a
+            key={number}
+            href={`tel:${number}`}
+            className="whitespace-nowrap text-text-onNavy no-underline hover:text-gold"
+          >
+            {label} <span className="font-bold text-cream">{number}</span>
+          </a>
+        ))}
       </div>
 
       <div className="mx-auto flex max-w-360 items-center justify-center gap-4 border-t border-cream/12 px-10 py-4 text-sm max-lg:flex-col max-lg:px-5">
