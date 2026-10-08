@@ -54,8 +54,8 @@ function Footer() {
             Seguros e consultoria empresarial. Solução total com abrangência
             nacional para logística, transporte e para a sua empresa.
           </p>
-          <blockquote className="mt-6 max-w-95 border-l-2 border-gold pl-4 max-lg:max-w-none">
-            <p className="font-display text-lg leading-relaxed text-cream italic">
+          <blockquote className="mt-6 border-l-2 border-gold pl-4">
+            <p className="font-display text-xl leading-relaxed whitespace-nowrap text-cream italic max-lg:text-lg max-lg:whitespace-normal">
               “Posso todas as coisas naquele que me fortalece.”
             </p>
             <cite className="mt-1.5 block text-[13px] font-bold tracking-[1.5px] text-gold not-italic uppercase">
