@@ -3,6 +3,7 @@ import Header from './components/Header'
 import ScrollToTop from './components/ScrollToTop'
 import Hero from './components/Hero'
 import Inicio from './components/Inicio'
+import Emergencia from './components/Emergencia'
 import Institucional from './components/Institucional'
 import Seguros from './components/Seguros'
 import Tecnologias from './components/Tecnologias'
@@ -30,6 +31,7 @@ function App() {
               <>
                 <Hero />
                 <Inicio />
+                <Emergencia />
               </>
             }
           />

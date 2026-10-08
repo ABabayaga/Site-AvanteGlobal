@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { label: 'Você sabia?', to: '/novidades' },
 ]
 
-const EMERGENCY_LINK = { label: 'Emergência', to: '/seguros#emergencia' }
+const EMERGENCY_LINK = { label: 'Emergência', to: '/#emergencia' }
 
 function PhoneIcon() {
   return (
