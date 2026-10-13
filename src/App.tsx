@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import Header from './components/Header'
 import ScrollToTop from './components/ScrollToTop'
 import Hero from './components/Hero'
@@ -45,6 +46,7 @@ function App() {
       </main>
       <Footer />
       <ContactModal />
+      <Analytics />
     </>
   )
 }
