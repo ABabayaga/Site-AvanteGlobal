@@ -45,7 +45,7 @@ function Footer() {
         <div>
           <Link to="/" className="inline-flex items-center">
             <img
-              src="/logolight.png"
+              src="/logolight2-crop.png"
               alt="Avante Global Seguros"
               className="h-14 w-auto"
             />
